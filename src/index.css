@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 30% 97%;
+    --foreground: 25 40% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 40% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 40% 25%;
+
+    --primary: 45 90% 70%;
+    --primary-foreground: 25 40% 25%;
+
+    --secondary: 350 80% 85%;
+    --secondary-foreground: 25 40% 25%;
+
+    --muted: 40 30% 92%;
+    --muted-foreground: 25 20% 50%;
+
+    --accent: 350 80% 85%;
+    --accent-foreground: 25 40% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 30% 88%;
+    --input: 40 30% 88%;
+    --ring: 45 90% 70%;
+
+    --radius: 1rem;
+    
+    --warm-brown: 25 40% 35%;
+    --cream: 40 30% 95%;
+    --pastel-yellow: 45 90% 85%;
+    --light-pink: 350 80% 90%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 30% 10%;
+    --foreground: 40 30% 95%;
+
+    --card: 25 25% 15%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 25 25% 15%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 45 85% 65%;
+    --primary-foreground: 25 40% 15%;
+
+    --secondary: 350 70% 70%;
+    --secondary-foreground: 25 40% 15%;
+
+    --muted: 25 20% 20%;
+    --muted-foreground: 40 20% 60%;
+
+    --accent: 350 70% 70%;
+    --accent-foreground: 25 40% 15%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 45 85% 65%;
+    
+    --warm-brown: 25 40% 45%;
+    --cream: 25 20% 20%;
+    --pastel-yellow: 45 85% 70%;
+    --light-pink: 350 70% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
