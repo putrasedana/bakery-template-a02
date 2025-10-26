@@ -1,4 +1,11 @@
-import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Instagram,
+  MessageCircle,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -47,8 +54,8 @@ const Contact = () => {
             Get in Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We'd love to hear from you! Reach out to us for orders, questions, or just
-            to say hello.
+            We'd love to hear from you! Reach out to us for orders, questions,
+            or just to say hello.
           </p>
         </div>
 
@@ -79,30 +86,6 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Quick Contact Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up">
-          <a
-            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" className="rounded-full w-full sm:w-auto">
-              <MessageCircle className="mr-2" size={20} />
-              Chat on WhatsApp
-            </Button>
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto">
-              <Instagram className="mr-2" size={20} />
-              Follow on Instagram
-            </Button>
-          </a>
-        </div>
-
         {/* Google Maps */}
         <div className="rounded-3xl overflow-hidden shadow-xl animate-fade-up">
           <iframe
@@ -118,13 +101,13 @@ const Contact = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-12 text-center animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-heading text-primary mb-4">
+        <div className="mt-20 bg-gradient-to-br from-primary/60 via-secondary/60 to-accent/60 rounded-3xl p-12 text-center animate-fade-up">
+          <h2 className="text-3xl md:text-4xl font-heading text-primary-foreground mb-4">
             Stay Sweet with Us!
           </h2>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Follow us on Instagram for the latest treats, special offers, and baking
-            inspiration!
+            Follow us on Instagram for the latest treats, special offers, and
+            baking inspiration!
           </p>
           <a
             href="https://instagram.com"

@@ -53,7 +53,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[650px] flex items-center justify-center overflow-hidden">
         <picture>
           <source srcSet={heroBakery} type="image/webp" />
           <img
@@ -68,7 +68,7 @@ const Home = () => {
           />
         </picture>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-background/0" />
 
         <div className="relative container mx-auto px-4 z-10">
           <div className="max-w-2xl animate-fade-up">
@@ -160,10 +160,10 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
+      <section className="bg-gradient-to-br from-primary/60 via-secondary/60 to-accent/60 rounded-3xl p-20 animate-fade-up">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto animate-fade-up">
-            <h2 className="text-4xl md:text-5xl font-heading text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading text-secondary-foreground mb-6">
               Ready to Order?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">

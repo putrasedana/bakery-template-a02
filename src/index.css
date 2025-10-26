@@ -37,7 +37,7 @@ All colors MUST be HSL.
     --ring: 45 90% 70%;
 
     --radius: 1rem;
-    
+
     --warm-brown: 25 40% 35%;
     --cream: 40 30% 95%;
     --pastel-yellow: 45 90% 85%;
@@ -88,7 +88,7 @@ All colors MUST be HSL.
     --border: 25 20% 25%;
     --input: 25 20% 25%;
     --ring: 45 85% 65%;
-    
+
     --warm-brown: 25 40% 45%;
     --cream: 25 20% 20%;
     --pastel-yellow: 45 85% 70%;
@@ -104,8 +104,13 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-body;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 }
@@ -114,7 +119,7 @@ All colors MUST be HSL.
   .animate-fade-up {
     animation: fade-up 0.6s ease-out;
   }
-  
+
   .animate-scale-in {
     animation: scale-in 0.4s ease-out;
   }

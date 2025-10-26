@@ -57,8 +57,8 @@ const About = () => {
         </div>
 
         {/* Mission Section */}
-        <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-3xl p-12 mb-20 animate-fade-up">
-          <h2 className="text-3xl font-heading text-primary text-center mb-8">
+        <div className="bg-gradient-to-br from-primary/60 via-secondary/60 to-accent/60 rounded-3xl p-12 mb-20 animate-fade-up">
+          <h2 className="text-3xl font-heading text-primary-foreground text-center mb-8">
             Our Mission
           </h2>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto leading-relaxed">

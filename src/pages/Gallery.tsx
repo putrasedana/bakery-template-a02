@@ -154,7 +154,7 @@ const Gallery = () => {
               if (e.key === "ArrowLeft") showPrev();
               if (e.key === "ArrowRight") showNext();
             }}
-            tabIndex={-1} // allows div to capture keyboard events
+            tabIndex={-1}
           >
             {/* Close Button */}
             <button
@@ -162,20 +162,32 @@ const Gallery = () => {
                 e.stopPropagation();
                 closeModal();
               }}
-              className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+              className="
+    absolute 
+    top-4 
+    left-1/2 
+    -translate-x-1/2 
+    md:left-auto md:right-6 md:translate-x-0 
+    bg-black/60 hover:bg-black/80 
+    text-white rounded-full p-3 
+    transition-colors 
+    focus:outline-none focus:ring-2 focus:ring-white
+  "
               aria-label="Close gallery"
               title="Close"
+              type="button"
             >
               <X className="w-6 h-6" aria-hidden="true" />
             </button>
 
-            {/* Previous Button */}
+            {/* Previous Button (hidden on mobile) */}
             <button
+              type="button"
               onClick={(e) => {
                 e.stopPropagation();
                 showPrev();
               }}
-              className="absolute left-6 text-white bg-black/50 hover:bg-black/70 p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white"
+              className="hidden md:flex absolute left-6 text-white bg-black/50 hover:bg-black/70 p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white"
               aria-label="Previous image"
               title="Previous"
             >
@@ -192,13 +204,14 @@ const Gallery = () => {
               onClick={(e) => e.stopPropagation()}
             />
 
-            {/* Next Button */}
+            {/* Next Button (hidden on mobile) */}
             <button
+              type="button"
               onClick={(e) => {
                 e.stopPropagation();
                 showNext();
               }}
-              className="absolute right-6 text-white bg-black/50 hover:bg-black/70 p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white"
+              className="hidden md:flex absolute right-6 text-white bg-black/50 hover:bg-black/70 p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white"
               aria-label="Next image"
               title="Next"
             >
@@ -208,8 +221,8 @@ const Gallery = () => {
         )}
 
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-12 animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-heading text-primary mb-4">
+        <div className="mt-20 text-center bg-gradient-to-br from-primary/60 via-secondary/60 to-accent/60 rounded-3xl p-12 animate-fade-up">
+          <h2 className="text-3xl md:text-4xl font-heading text-primary-foreground mb-4">
             Want to See Your Event Here?
           </h2>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">

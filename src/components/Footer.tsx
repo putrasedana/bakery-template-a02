@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border mt-20">
+    <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
@@ -14,8 +14,8 @@ const Footer = () => {
               Dapoer Manis
             </h3>
             <p className="text-muted-foreground mb-4">
-              Homemade treats baked fresh every day with love. Quality ingredients,
-              traditional recipes, and heartfelt service.
+              Homemade treats baked fresh every day with love. Quality
+              ingredients, traditional recipes, and heartfelt service.
             </p>
             <div className="flex space-x-4">
               <a

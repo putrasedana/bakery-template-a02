@@ -11,7 +11,6 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Menu", path: "/menu" },
-    { name: "Order", path: "/order" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" },
   ];
@@ -24,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <span className="text-3xl font-heading text-primary group-hover:scale-110 transition-transform">
+            <span className="text-3xl font-heading text-primary-foreground group-hover:scale-110 transition-transform">
               Dapoer Manis
             </span>
           </Link>
