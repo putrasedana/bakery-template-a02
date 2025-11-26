@@ -126,7 +126,7 @@ const Menu = () => {
 
   return (
     <div className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="text-5xl md:text-6xl font-heading text-primary mb-6">
@@ -152,12 +152,11 @@ const Menu = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredProducts.map((product, index) => (
             <div
               key={index}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              className={`animate-fade-up [animation-delay:${index * 0.05}s]`}
             >
               <ProductCard {...product} />
             </div>

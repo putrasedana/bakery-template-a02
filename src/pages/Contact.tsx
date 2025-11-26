@@ -1,19 +1,7 @@
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Instagram,
-  MessageCircle,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
-  const whatsappNumber = "6281234567890";
-  const whatsappMessage = encodeURIComponent(
-    "Hello! I'd like to know more about Dapoer Manis."
-  );
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -47,7 +35,7 @@ const Contact = () => {
 
   return (
     <div className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="text-5xl md:text-6xl font-heading text-primary mb-6">
@@ -64,8 +52,9 @@ const Contact = () => {
           {contactInfo.map((item, index) => (
             <div
               key={index}
-              className="bg-card p-6 rounded-3xl shadow-sm border-2 border-transparent hover:border-primary/30 transition-all animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`bg-card p-6 rounded-3xl shadow-sm border-2 border-transparent 
+              hover:border-primary/30 transition-all animate-fade-up
+              [animation-delay:${index * 0.1}s]`}
             >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
                 <item.icon size={28} className="text-primary" />
@@ -89,13 +78,11 @@ const Contact = () => {
         {/* Google Maps */}
         <div className="rounded-3xl overflow-hidden shadow-xl animate-fade-up">
           <iframe
-            title="Dapoer Manis Location Map"
+            title="BakeryHaven Location Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.1751453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1234567890"
             width="100%"
             height="450"
-            style={{ border: 0 }}
             allowFullScreen
-            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>

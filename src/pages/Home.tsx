@@ -25,7 +25,7 @@ const Home = () => {
     },
     {
       name: "Floral Cupcakes",
-      description: "Vanilla cupcakes with buttercream flowers",
+      description: "Delicious Vanilla cupcakes with buttercream flowers",
       price: "Rp 45,000",
       image: productCupcakes,
       imageAlt: "Beautiful cupcakes with floral decorations",
@@ -70,10 +70,10 @@ const Home = () => {
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-background/0" />
 
-        <div className="relative container mx-auto px-4 z-10">
-          <div className="max-w-2xl animate-fade-up">
+        <div className="relative max-w-6xl  px-4 z-10">
+          <div className="animate-fade-up">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading text-primary mb-6 leading-tight">
-              Welcome to Dapoer Manis
+              Welcome to BakeryHaven
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 font-light">
               Homemade treats baked fresh every day!
@@ -104,13 +104,19 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
-                key={index}
-                className="text-center p-8 bg-card rounded-3xl shadow-sm hover:shadow-md transition-shadow animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`animate-fade-up ${
+                  index === 0
+                    ? "[animation-delay:0s]"
+                    : index === 1
+                    ? "[animation-delay:0.1s]"
+                    : index === 2
+                    ? "[animation-delay:0.2s]"
+                    : "[animation-delay:0.3s]"
+                }`}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                   <feature.icon size={32} className="text-primary" />
@@ -125,7 +131,7 @@ const Home = () => {
 
       {/* Featured Products Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-up">
             <h2 className="text-4xl md:text-5xl font-heading text-primary mb-4">
               Best Sellers
@@ -140,8 +146,15 @@ const Home = () => {
             {featuredProducts.map((product, index) => (
               <div
                 key={index}
-                className="animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`animate-fade-up ${
+                  index === 0
+                    ? "[animation-delay:0s]"
+                    : index === 1
+                    ? "[animation-delay:0.1s]"
+                    : index === 2
+                    ? "[animation-delay:0.2s]"
+                    : "[animation-delay:0.3s]"
+                }`}
               >
                 <ProductCard {...product} />
               </div>
@@ -161,7 +174,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary/60 via-secondary/60 to-accent/60 rounded-3xl p-20 animate-fade-up">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto animate-fade-up">
             <h2 className="text-4xl md:text-5xl font-heading text-secondary-foreground mb-6">
               Ready to Order?

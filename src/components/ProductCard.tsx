@@ -10,7 +10,13 @@ interface ProductCardProps {
   imageAlt: string;
 }
 
-const ProductCard = ({ name, description, price, image, imageAlt }: ProductCardProps) => {
+const ProductCard = ({
+  name,
+  description,
+  price,
+  image,
+  imageAlt,
+}: ProductCardProps) => {
   return (
     <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
       <div className="overflow-hidden">
@@ -21,9 +27,7 @@ const ProductCard = ({ name, description, price, image, imageAlt }: ProductCardP
         />
       </div>
       <CardContent className="p-6">
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-          {name}
-        </h3>
+        <h3 className="text-xl font-semibold mb-2 transition-colors">{name}</h3>
         <p className="text-muted-foreground text-sm mb-4">{description}</p>
         <p className="text-2xl font-bold text-primary">{price}</p>
       </CardContent>

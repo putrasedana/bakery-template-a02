@@ -19,12 +19,12 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <span className="text-3xl font-heading text-primary-foreground group-hover:scale-110 transition-transform">
-              Dapoer Manis
+              BakeryHaven
             </span>
           </Link>
 

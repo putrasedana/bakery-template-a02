@@ -4,7 +4,7 @@ import { Heart, Users, Star } from "lucide-react";
 const About = () => {
   return (
     <div className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-up">
           <h1 className="text-5xl md:text-6xl font-heading text-primary mb-6">
@@ -20,18 +20,18 @@ const About = () => {
           <div className="animate-fade-up">
             <img
               src={aboutBakery}
-              alt="Inside Dapoer Manis bakery kitchen"
-              className="rounded-3xl shadow-xl w-full object-cover"
+              alt="Inside BakeryHaven bakery kitchen"
+              className="rounded-3xl h-96 w-full object-cover"
             />
           </div>
 
           <div className="animate-fade-up lg:animate-delay-200">
             <h2 className="text-3xl font-heading text-primary mb-6">
-              How Dapoer Manis Began
+              How BakeryHaven Began
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Dapoer Manis started as a dream in a small home kitchen, where
+                BakeryHaven started as a dream in a small home kitchen, where
                 our founder discovered the joy of baking and sharing sweet
                 moments with family and friends.
               </p>
@@ -42,7 +42,7 @@ const About = () => {
                 business.
               </p>
               <p>
-                Today, Dapoer Manis has become a beloved local bakery, serving
+                Today, BakeryHaven has become a beloved local bakery, serving
                 the community with the same dedication to quality and love that
                 started it all. Every cake, cookie, and pastry is still made by
                 hand, using only the freshest ingredients and traditional

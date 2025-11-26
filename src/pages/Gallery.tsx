@@ -31,12 +31,12 @@ const Gallery = () => {
     },
     {
       src: heroBakery,
-      alt: "Freshly baked assortment of treats at Dapoer Manis",
+      alt: "Freshly baked assortment of treats at BakeryHaven",
       category: "Bakery",
     },
     {
       src: aboutBakery,
-      alt: "Behind the scenes at Dapoer Manis kitchen",
+      alt: "Behind the scenes at BakeryHaven kitchen",
       category: "Kitchen",
     },
   ];
@@ -99,7 +99,7 @@ const Gallery = () => {
 
   return (
     <div className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="text-5xl md:text-6xl font-heading text-primary mb-6">
@@ -114,14 +114,16 @@ const Gallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (
             <button
+              type="button"
               key={index}
               ref={(el) => (imageRefs.current[index] = el)}
               onClick={() => {
                 prevFocusedIndexRef.current = index;
                 setSelectedIndex(index);
               }}
-              className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-up focus:outline-none focus:ring-4 focus:ring-primary cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300
+              animate-fade-up [animation-delay:${index * 0.1}s]
+              focus:outline-none focus:ring-4 focus:ring-primary cursor-pointer`}
               aria-label={`View ${image.category} image`}
             >
               <div className="aspect-square overflow-hidden">

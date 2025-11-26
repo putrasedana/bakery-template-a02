@@ -6,12 +6,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
             <h3 className="text-2xl font-heading text-primary mb-4">
-              Dapoer Manis
+              BakeryHaven
             </h3>
             <p className="text-muted-foreground mb-4">
               Homemade treats baked fresh every day with love. Quality
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>© {currentYear} Dapoer Manis. All rights reserved. Made with ❤️</p>
+          <p>© {currentYear} BakeryHaven. All rights reserved. Made with ❤️</p>
         </div>
       </div>
     </footer>
